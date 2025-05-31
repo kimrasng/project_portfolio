@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>kimrasng-project-portfolio</title>
+</head>
+<body class="bg-stone-900 text-gray-200">
+
+
+    <nav class="bg-stone-950 p-4 shadow-md fixed w-full z-50">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="#main" class="text-white text-2xl font-bold">Kimrasng-Portfolio</a>
+
+            <ul class="hidden md:flex space-x-6">
+                <li><a href="#projects" class="text-gray-300 hover:text-blue-400 transition-colors">Projects</a></li>
+                <li><a href="#contact" class="text-gray-300 hover:text-blue-400 transition-colors">Contact</a></li>
+            </ul>
+
+            <button id="menu-toggle" class="md:hidden text-white focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" 
+                    viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" 
+                    d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 w-full bg-stone-950 shadow-lg z-40">
+            <ul class="flex flex-col items-center space-y-4 p-6">
+                <li><a href="#projects" class="text-gray-300 hover:text-blue-400 transition-colors">Projects</a></li>
+                <li><a href="#contact" class="text-gray-300 hover:text-blue-400 transition-colors">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const menuToggle = document.getElementById('menu-toggle');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            menuToggle.addEventListener('click', function () {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            mobileMenu.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+        });
+    </script>
+
+    <section id="main" class="flex flex-col justify-center items-center min-h-screen p-8 text-center">
+        <h1 class="text-5xl font-extrabold text-white mb-4">Kimrasng Project Portfolio</h1>
+        <p class="text-lg max-w-xl text-gray-400">
+            Welcome! This website showcases the projects I have created so far, highlighting my skills and growth as a developer.
+        </p>
+    </section>
+
+    <section id="projects" class="container mx-auto px-6 py-12 min-h-screen flex flex-col justify-center items-center">
+    <h2 class="text-4xl font-bold mb-10 text-center text-white">My Projects</h2>
+
+    <div class="relative w-full scrollbar-hide">
+        <div id="slider" class="flex overflow-x-auto space-x-6 scroll-smooth px-6 py-4 snap-x snap-mandatory">
+        
+        <div class="min-w-[320px] max-w-[320px] h-[340px] flex-shrink-0 bg-stone-800 rounded-lg p-7 shadow-lg hover:shadow-blue-600 transition-shadow duration-300 snap-start flex flex-col">
+            <h3 class="text-2xl font-semibold mb-3 text-white">QWERTY Website</h3>
+            <p class="mb-4 text-gray-300">A website to promote your club</p>
+            <p class="mb-4 italic text-sm text-blue-400">Technologies: React.js</p>
+            <a href="https://github.com/sunrin-qwerty/web" target="_blank"
+            class="text-blue-500 hover:underline font-semibold transition-colors">View on GitHub</a>
+            <a href="https://sunrint-qwerty.kr" target="_blank"
+            class="block mt-3 text-blue-500 hover:underline font-semibold transition-colors mt-auto">Visit Website</a>
+        </div>
+
+        <div class="min-w-[320px] max-w-[320px] h-[340px] flex-shrink-0 bg-stone-800 rounded-lg p-7 shadow-lg hover:shadow-blue-600 transition-shadow duration-300 snap-start flex flex-col">
+            <h3 class="text-2xl font-semibold mb-3 text-white">Music Player App - frontend</h3>
+            <p class="mb-4 text-gray-300">Music Playback Web with React</p>
+            <p class="mb-4 italic text-sm text-blue-400">Technologies: React.js</p>
+            <a href="https://github.com/kimrasng/music_app" target="_blank"
+            class="text-blue-500 hover:underline font-semibold transition-colors">View on GitHub</a>
+            <a href="https://music.kimrasng.kr" target="_blank"
+            class="block mt-3 text-blue-500 hover:underline font-semibold transition-colors mt-auto">Visit Website</a>
+        </div>
+
+        <div class="min-w-[320px] max-w-[320px] h-[340px] flex-shrink-0 bg-stone-800 rounded-lg p-7 shadow-lg hover:shadow-blue-600 transition-shadow duration-300 snap-start flex flex-col">
+            <h3 class="text-2xl font-semibold mb-3 text-white">Music Player App - backend</h3>
+            <p class="mb-4 text-gray-300">API to store information about songs to be played in the Music app</p>
+            <p class="mb-4 italic text-sm text-blue-400">Technologies: Express.js, MySql</p>
+            <a href="https://github.com/kimrasng/api_server" target="_blank"
+            class="text-blue-500 hover:underline font-semibold transition-colors">View on GitHub</a>
+            <a href="https://api.kimrasng.kr" target="_blank"
+            class="block mt-3 text-blue-500 hover:underline font-semibold transition-colors mt-auto">Visit Website</a>
+        </div>
+
+        <div class="min-w-[320px] max-w-[320px] h-[340px] flex-shrink-0 bg-stone-800 rounded-lg p-7 shadow-lg hover:shadow-blue-600 transition-shadow duration-300 snap-start flex flex-col">
+            <h3 class="text-2xl font-semibold mb-3 text-white">My Web Site</h3>
+            <p class="mb-4 text-gray-300">My personal website to introduce myself</p>
+            <p class="mb-4 italic text-sm text-blue-400">Technologies: Html, Css, Js</p>
+            <a href="https://github.com/kimrasng/kimrasng.github.io" target="_blank"
+            class="text-blue-500 hover:underline font-semibold transition-colors">View on GitHub</a>
+            <a href="https://kimrasng.kr" target="_blank"
+            class="block mt-3 text-blue-500 hover:underline font-semibold transition-colors mt-auto">Visit Website</a>
+        </div>
+        </div>
+    </div>
+    </section>
+
+    <section id="contact" class="py-16 bg-stone-900">
+        <div class="max-w-3xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-white mb-10">Contact Me</h2>
+            <form action="https://getform.io/f/bronykoa" method="POST" class="bg-stone-800 p-8 rounded-2xl shadow-xl space-y-8">
+                <div class="flex flex-col md:flex-row md:space-x-8 space-y-6 md:space-y-0">
+                    <div class="flex-1">
+                        <label for="name" class="block text-sm font-medium text-gray-300 mb-2">Name</label>
+                        <input type="text" id="name" name="name" required
+                            class="w-full px-4 py-3 bg-stone-700 border border-stone-600 rounded-lg text-gray-100 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+                    </div>
+                    <div class="flex-1">
+                        <label for="email" class="block text-sm font-medium text-gray-300 mb-2">Email</label>
+                        <input type="email" id="email" name="email" required
+                            class="w-full px-4 py-3 bg-stone-700 border border-stone-600 rounded-lg text-gray-100 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+                    </div>
+                </div>
+                <div>
+                    <label for="message" class="block text-sm font-medium text-gray-300 mb-2">Message</label>
+                    <textarea id="message" name="message" rows="5" required
+                        class="w-full px-4 py-3 bg-stone-700 border border-stone-600 rounded-lg text-gray-100 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+                </div>
+                <input type="hidden" name="_gotcha" class="hidden" />
+                <button type="submit"
+                    class="w-full bg-blue-600 hover:bg-blue-700 transition-colors duration-300 text-white font-semibold py-3 rounded-lg">
+                    Send
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="bg-stone-950 p-8 text-center rounded-t-3xl shadow-inner mt-12">
+        <div class="max-w-3xl mx-auto flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
+            <div class="text-white text-lg font-semibold">
+                © 2025 <a href="https://kimrasng.kr" class="underline hover:text-blue-400 transition-colors">kimrasng</a>
+            </div>
+            <div>
+                <a href="https://github.com/kimrasng" target="_blank"
+                   class="inline-flex items-center gap-2 px-5 py-2 bg-stone-800 rounded-full text-white hover:bg-blue-500 transition-colors duration-300">
+                    <img src="/logo/github.svg" alt="GitHub Logo" class="w-5 h-5" />
+                    GitHub
+                </a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
